@@ -1,0 +1,62 @@
+# config settings for Thomas-Stieber code
+
+# log column names
+col_names:
+  md_col: &md_col DEPTH
+  gr_col: &gr_col GR
+  phit_col: &phit_col PHIT
+
+# test parameter set 1
+# gr_clean_sand: 20
+# gr_lam: 100
+# phit_clean_sand: 0.33
+# phit_lam: 0.15
+
+# test parameter set 2
+ts_parameters:
+  gr_clean_sand: 53.7
+  gr_lam: 91.5
+  phit_clean_sand: 0.358
+  phit_lam: 0.191
+  structural_endpoint: paper # not strictly necessary: is default
+  # structural_endpoint: alternative 
+
+# log cosmetics
+log_settings:
+  *gr_col: !!python/tuple [0.0, 150.0, green]
+  *phit_col: !!python/tuple [0.0, 0.4, red]
+
+# T-S specifics ** CHANGE ONLY THE VALUES IF YOU MUST BUT KEEP ALL NAMES/VARIABLES!
+ts_log_names:
+  ts_sf: &ts_sf TS_SF
+  ts_xdn: &ts_xdn TS_XDN
+  ts_xsn: &ts_xsn TS_XSN
+  ts_phit_sand_macro: &ts_phit_sand_macro TS_PHIT_SAND_MACRO
+  ts_phit_sand_micro: &ts_phit_sand_micro TS_PHIT_SAND_MICRO
+  ts_phit_sand_total: &ts_phit_sand_total TS_PHIT_SAND_TOTAL
+  ts_vsh_wet_lam: &ts_vsh_wet_lam TS_VSH_WET_LAM
+  ts_vsh_wet_disp: &ts_vsh_wet_disp TS_VSH_WET_DISP
+  ts_vsh_wet_struct: &ts_vsh_wet_struct TS_VSH_WET_STRUCT
+  ts_vsh_wet_total: &ts_vsh_wet_total TS_VSH_WET_TOTAL
+  ts_vsh_dry_lam: &ts_vsh_dry_lam TS_VSH_DRY_LAM
+  ts_vsh_dry_disp: &ts_vsh_dry_disp TS_VSH_DRY_DISP
+  ts_vsh_dry_struct: &ts_vsh_dry_struct TS_VSH_DRY_STRUCT
+  ts_vsh_dry_total: &ts_vsh_dry_total TS_VSH_DRY_TOTAL
+  ts_other: &ts_other TS_OTHER
+
+ts_colors:
+  *ts_sf: !!python/str yellow
+  *ts_xdn: !!python/str orange
+  *ts_xsn: !!python/str brown
+  *ts_phit_sand_macro: !!python/str orange
+  *ts_phit_sand_micro: !!python/str black
+  *ts_phit_sand_total: !!python/str purple
+  *ts_vsh_wet_lam: !!python/str skyblue
+  *ts_vsh_wet_disp: !!python/str aqua
+  *ts_vsh_wet_struct: !!python/str steelblue
+  *ts_vsh_wet_total: !!python/str navy
+  *ts_vsh_dry_lam: !!python/str yellowgreen
+  *ts_vsh_dry_disp: !!python/str olivedrab
+  *ts_vsh_dry_struct: !!python/str teal
+  *ts_vsh_dry_total: !!python/str darkgreen
+  *ts_other: !!python/str slategrey
